@@ -25,10 +25,10 @@ Example folder structure:
 
 ```
 /12345/
-  ├── 12345 - Mounting Bracket.step
-  ├── 12345 - Mounting Bracket.3mf
+  ├── 12345-Mounting Bracket.step
+  ├── 12345-Mounting Bracket.3mf
   ├── metadata.yaml
-  └── 12345 - Mounting Bracket.pdf (drawing)
+  └── 12345-Mounting Bracket.pdf (drawing)
 ```
 
 **metadata.yaml** will contain:
