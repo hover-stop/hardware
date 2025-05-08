@@ -6,14 +6,14 @@ This guide defines how we design, document, and manage the hardware for the Hove
 
 ## Units
 
-- All measurements and dimensions must be in **millimeters (mm)**.
+* All measurements and dimensions must be in **millimeters (mm)**.
 
 ---
 
 ## Repository Structure
 
-- All parts and assemblies are stored in the GitHub hardware repository.
-- Git is the **single source of truth** for design files and history.
+* All parts and assemblies are stored in the GitHub hardware repository.
+* Git is the **single source of truth** for design files and history.
 
 ---
 
@@ -39,9 +39,13 @@ owner: Engines
 description: Steel bracket that supports the nozzle stop block
 parent_assembly: 12000
 status: Release
+part_type: Machined
 primary_source: https://mcmaster.com/1234
 secondary_source: https://digikey.com/xyz
 cost: 4.25
+alternatives:
+  - description: Equivalent part from local supplier
+    source: https://localvendor.com/part
 contributors:
   - Engines
   - Carpet3
@@ -51,100 +55,113 @@ contributors:
 
 ## Drawing Requirements
 
-- Every **part** must have a detailed drawing specifying:
-  - Dimensions
-  - Tolerances
-  - Critical features
+* Every **part** must have a detailed drawing specifying:
 
-- Every **assembly** must also include:
-  - A complete exploded or assembled view drawing
-  - Fastener and hardware BOM (bill of materials)
+  * Dimensions
+  * Tolerances (especially on mating surfaces, press fits, and interfaces)
+  * Critical features (holes, mounting surfaces, alignment interfaces)
 
-- Drawings will be published to Discord for reference
+* Every **assembly** must also include:
+
+  * A complete exploded or assembled view drawing
+  * Fastener and hardware BOM (bill of materials)
+
+* Drawings will be published to Discord for reference
+
+Default tolerance: **±0.2mm** unless otherwise specified.
 
 ---
 
 ## Part Numbering
 
-- Every new part is assigned a **unique random 5-digit number**
-- The number is the primary ID and **must appear in the file names and metadata**
-- No version letters or suffixes should be used (e.g., “rev A”)
+* Every new part is assigned a **unique random 5-digit number**
+* Part numbers are maunaully assigned or created via command-line tool (coming soon)
+* Contributors must register new numbers to avoid collisions
 
 ---
 
 ## Revision Control
 
-- No manual revision numbers
-- All versioning is handled through **Git**
-- Commit history and branches reflect all changes and approvals
+* No manual revision letters or numbers
+* All versioning is handled through **Git commit history**
+* Contributions are tracked by name in `metadata.yaml`
 
 ---
 
 ## Status Tags
 
-Parts must have one of the following statuses in `metadata.yaml`:
+Parts must have one of the following statuses:
 
-- `Draft` – initial concept or WIP
-- `Review` – under review by others
-- `Release` – approved and finalized for build or print
+* `Draft`
+* `Review`
+* `Release`
 
 ---
 
 ## Release Criteria
 
-A part can be considered “released” when:
+A part can be considered "released" when:
 
-- A `.step` file is present and accurate
-- A `.3mf` (or equivalent 3D printing format) is provided
-- A detailed part drawing is completed and reviewed
-- A drawing of the full assembly (if applicable) is provided
-- A `metadata.yaml` is fully filled in
-- If applicable, a tested `.gcode` file is also included
+* A valid `.step` file exists
+* A `.3mf` or `.stl` file is provided (if 3D printed)
+* A detailed part drawing is complete and reviewed
+* A drawing of the full assembly is provided (if applicable)
+* The `metadata.yaml` is complete and includes:
+
+  * Material and process type (e.g., Machined, 3D Printed)
+  * Primary/secondary sources
+  * Cost info
+  * Alternative sourcing
+
+Note: **G-code is not required**, as it varies too much between printers.
 
 ---
 
 ## General Design Guidance
 
-- Avoid reinventing the wheel — use existing parts or designs where possible
-- Standardize common parts and **include sources** in metadata
-- Prefer off-the-shelf components and consumables when it simplifies builds
-- Each project will have a **ghost assembly**, aka a “Bitkit,” which represents a reusable collection of fasteners or consumables
+* Avoid reinventing the wheel — reuse existing parts when practical
+* Use standard hardware from the shared Bitkit whenever possible
+* Off-the-shelf parts must include supplier info in metadata
+* Contributors are encouraged to propose new Bitkit parts via PRs
+
+### Part Types (for `part_type` in metadata.yaml):
+
+* `3D Printed`
+* `Machined`
+* `Off The Shelf`
+* `Sheet Metal`
+* `Electronics`
+* `Cable or Wire`
+* `Other`
 
 ---
 
 ## Contribution & Versioning
 
-- All changes must go through **Git** (e.g., via PRs or commits to main)
-- Contributors should be listed in the part’s `metadata.yaml`
-- To contribute:
-  - Create a working branch
-  - Commit changes
-  - Create a PR to `main`
-  - Once reviewed, changes are merged into `main`
+* All design updates must go through **Git**
+* Contributors are listed in each part's `metadata.yaml`
+* Use branches to manage changes:
+
+```
+main → reviewed and validated parts
+dev branches → in-progress edits or features
+release → clean, tagged snapshots of released components
+```
 
 ---
 
-## Release Branch Process
+## Release Process
 
-We maintain a clean separation of work and released output.
-
-```
-main → reviewed and tested parts
-release → officially published, tagged versions
-working branches → individual development (e.g. `feature/nozzle-block`)
-```
-
-When a part is finalized:
-
-1. Reviewed and merged to `main`
-2. Included in a release commit to `release`
-3. Tagged in Git with a version tag (e.g. `v1.0.3`)
-4. Posted in Discord with release notes
+1. Contributor makes change in feature branch
+2. Pull request opens to `main`, reviewed by peers
+3. Once approved, merged into `main`
+4. At regular intervals, parts are merged into `release` and tagged (e.g., `v1.0.2`)
+5. Release notes posted to Discord with list of updated parts
 
 ---
 
-## Communication & Coordination
+## Communication
 
-- All major updates are posted to Discord
-- Release announcements are published to the community
-- Questions, suggestions, and discussions occur in relevant Discord threads
+* All major changes, releases, and decisions are posted in Discord
+* Thread-based discussions encouraged per part or topic
+* New part numbers and assignments are coordinated via GitHub or Discord
