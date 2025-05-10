@@ -1,6 +1,6 @@
-part_number: 32000
+part_number: 32001
 owner: Kurisu
-description: Main chassis body for the throttle grip, designed for either 3D printing or CNC machining
+description: First part of the main chassis body for the throttle grip, designed for either 3D printing or CNC machining
 parent_assembly: 31000
 status: Draft
 part_type: 3D Printed
