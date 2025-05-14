@@ -33,22 +33,28 @@ Example folder structure:
 
 **metadata.yaml** will contain:
 
-```
-part_number: 12345
-owner: Engines
-description: Steel bracket that supports the nozzle stop block
-parent_assembly: 12000
-status: Release
-part_type: Machined
-primary_source: https://mcmaster.com/1234
-secondary_source: https://digikey.com/xyz
-cost: 4.25
+The structure of this file is enforced by the `utils/cli_validate_metadata.py` script.
+
+```yaml
+part_number: "12345" # Must be a 5-digit string matching the folder name
+owner: "Engines"
+name: "Mounting Bracket Example"
+description: "Steel bracket that supports the nozzle stop block"
+parent_assembly: "12000" # 5-digit part number of parent or "None"
+status: "Release" # See "Status Tags" section for allowed values
+part_type: "Machined" # See "Part Types" section for allowed values
+primary_source: "https://mcmaster.com/1234"
+secondary_source: "https://digikey.com/xyz" # Can be "None yet" or similar if not applicable
+cost: "4.25" # Can be a number or string like "TBD"
+quantity: 1 # Integer, minimum 1
 alternatives:
-  - description: Equivalent part from local supplier
-    source: https://localvendor.com/part
+  - description: "Equivalent part from local supplier"
+    source: "https://localvendor.com/part"
+  # - description: "Another alternative"
+  #   source: "Link or description"
 contributors:
-  - Engines
-  - Carpet3
+  - "Engines"
+  - "Carpet3"
 ```
 
 ---
@@ -59,6 +65,7 @@ The `utils/` directory in this repository contains helpful command-line scripts 
 
 *   **`cli_new_part.py`**: This script automates the creation of new part directories. It generates a unique random 5-digit part number, creates the correspondingly named folder, and populates it with a basic `metadata.yaml` file after prompting the user for necessary information.
 *   **`cli_make_bom.py`**: This script scans all part `metadata.yaml` files to generate a comprehensive Bill of Materials (`BOM.md`) in the project root. The `BOM.md` includes a table of all parts and a hierarchical Part Assembly Tree.
+*   **`cli_validate_metadata.py`**: This script validates all `metadata.yaml` files against a defined schema to ensure consistency and correctness. It checks for required fields, data types, and specific allowed values.
 
 For detailed instructions on setting up the Python environment for these scripts and their usage, please refer to the `utils/README.md` file.
 
@@ -101,11 +108,14 @@ Default tolerance: **±0.2mm** unless otherwise specified.
 
 ## Status Tags
 
-Parts must have one of the following statuses:
+Parts must have one of the following statuses in their `metadata.yaml` file. This is enforced by the `utils/cli_validate_metadata.py` script.
 
 * `Draft`
 * `Review`
 * `Release`
+* `Prototype`
+* `Obsolete`
+* `In Development`
 
 ---
 
@@ -137,12 +147,17 @@ Note: **G-code is not required**, as it varies too much between printers.
 
 ### Part Types (for `part_type` in metadata.yaml):
 
+The following are the allowed values for the `part_type` field. This is enforced by the `utils/cli_validate_metadata.py` script.
+
 * `3D Printed`
 * `Machined`
 * `Off The Shelf`
 * `Sheet Metal`
 * `Electronics`
 * `Cable or Wire`
+* `Assembly`
+* `Ghost`
+* `None`
 * `Other`
 
 ---
