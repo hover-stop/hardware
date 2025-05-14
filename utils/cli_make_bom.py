@@ -25,38 +25,42 @@ def find_metadata_files(project_root):
                 metadata_files.append(metadata_path)
     return metadata_files
 
-# New helper function to recursively build the tree string for a given part
-def _build_tree_recursive_str(part_number, parts_data, level, visited_for_path):
+# Updated helper function to recursively build the tree string
+def _build_tree_recursive_str(part_number, parts_data, indent_prefix, is_last_sibling, visited_for_path):
     part_info = parts_data.get(part_number)
+    line_connector = "└── " if is_last_sibling else "├── "
 
     if not part_info:
-        return "  " * level + f"* {part_number} - [Data Missing for this Part]\n"
+        return indent_prefix + line_connector + f"{part_number} - [Data Missing for this Part]\n"
 
     if part_number in visited_for_path:
         display_name_cycle = part_info.get('name', '[Name Missing]')
-        return "  " * level + f"* {part_number} - {display_name_cycle} ... [Circular reference detected]\n"
+        return indent_prefix + line_connector + f"{part_number} - {display_name_cycle} ... [Circular reference detected]\n"
     
     visited_for_path.add(part_number)
     
     display_name = part_info.get('name', '[Name Missing]')
-    full_display_name = f"{part_number} - {display_name}"
-
-    tree_str = "  " * level + f"* {full_display_name}\n"
+    tree_str = indent_prefix + line_connector + f"{part_number} - {display_name}\n"
     
-    # Ensure children are sorted for consistent output, e.g., by part number
-    sorted_children = sorted(part_info.get('children', []))
+    children = sorted(part_info.get('children', []))
+    num_children = len(children)
 
-    for child_pn in sorted_children:
-        tree_str += _build_tree_recursive_str(child_pn, parts_data, level + 1, visited_for_path.copy())
+    # Determine the prefix for the children's lines
+    new_indent_for_children = indent_prefix + ("    " if is_last_sibling else "│   ")
+
+    for i, child_pn in enumerate(children):
+        is_child_last_sibling = (i == num_children - 1)
+        tree_str += _build_tree_recursive_str(child_pn, parts_data, new_indent_for_children, is_child_last_sibling, visited_for_path.copy())
             
     return tree_str
 
-# New function to generate the Markdown section for the part assembly tree
+# Updated function to generate the Markdown section for the part assembly tree
 def generate_part_tree_markdown_section(bom_items_list):
-    part_tree_md = "\n## Part Assembly Tree\n\n"
+    part_tree_md = "\n## Part Assembly Tree\n\n```\n" # Start Markdown code block
     
     if not bom_items_list:
         part_tree_md += "No parts data available to build a tree.\n"
+        part_tree_md += "```\n" # End code block
         return part_tree_md
 
     parts_data = {}
@@ -75,26 +79,24 @@ def generate_part_tree_markdown_section(bom_items_list):
     all_part_numbers_from_metadata = set(parts_data.keys())
     
     for pn_from_meta in list(all_part_numbers_from_metadata): 
-        # Ensure we are working with a part that was definitely loaded from metadata
         if pn_from_meta not in parts_data or parts_data[pn_from_meta].get('is_placeholder', True):
-            continue # Skip if it became a placeholder or was removed
+            continue
 
         data = parts_data[pn_from_meta]
         parent_pn_str = data['parent_assembly']
 
         if parent_pn_str != 'None':
-            if parent_pn_str not in parts_data: # If parent doesn't exist, create as placeholder
+            if parent_pn_str not in parts_data: 
                 parts_data[parent_pn_str] = {
                     'name': '[External/Missing Parent]',
                     'parent_assembly': 'None', 
                     'children': [pn_from_meta],
                     'is_placeholder': True
                 }
-            else: # Parent exists, add current part as its child
+            else: 
                 if pn_from_meta not in parts_data[parent_pn_str]['children']:
                      parts_data[parent_pn_str]['children'].append(pn_from_meta)
     
-    # Identify root nodes (parts that are not children of any other part)
     all_child_pns = set()
     for pn_key in parts_data:
         for child_pn in parts_data[pn_key].get('children', []):
@@ -105,18 +107,36 @@ def generate_part_tree_markdown_section(bom_items_list):
         if pn_key not in all_child_pns:
             root_pns.append(pn_key)
     
-    # Sort root part numbers for consistent output
     sorted_root_pns = sorted(list(set(root_pns)))
 
     if not sorted_root_pns:
-        if parts_data: # If there is data but no roots, could be all children or a cycle
+        if parts_data: 
             part_tree_md += "No top-level assemblies identified. All parts may be interconnected or form cycles.\n"
         else:
              part_tree_md += "No parts data to build tree from.\n"
     else:
-        for root_pn in sorted_root_pns:
-            part_tree_md += _build_tree_recursive_str(root_pn, parts_data, 0, set())
+        num_roots = len(sorted_root_pns)
+        for i, root_pn in enumerate(sorted_root_pns):
+            root_info = parts_data.get(root_pn)
+            if not root_info: continue
             
+            # Print the root item name
+            part_tree_md += f"{root_pn} - {root_info.get('name', '[Name Missing]')}\n"
+            
+            children_of_root = sorted(root_info.get('children', []))
+            num_children_of_root = len(children_of_root)
+
+            for j, child_pn in enumerate(children_of_root):
+                is_child_last_sibling = (j == num_children_of_root - 1)
+                # Children of the root start with an empty initial indent_prefix from this level;
+                # _build_tree_recursive_str will add the appropriate connector.
+                part_tree_md += _build_tree_recursive_str(child_pn, parts_data, "", is_child_last_sibling, set()) 
+            
+            # Add a blank line between trees if there are multiple root assemblies and this isn't the last one
+            if num_roots > 1 and i < num_roots - 1:
+                part_tree_md += "\n"
+            
+    part_tree_md += "```\n" # End Markdown code block
     return part_tree_md
 
 def generate_bom_markdown(metadata_files):

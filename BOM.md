@@ -16,7 +16,10 @@ Generated on: 2025-05-13
 
 ## Part Assembly Tree
 
-* 62146 - HoverStop HSI Mk.1
-  * 57832 - Grip Assembly
-    * 32000 - Grip Chassis
-* 77875 - Ghost Volume, Throttle Body
+```
+62146 - HoverStop HSI Mk.1
+└── 57832 - Grip Assembly
+    └── 32000 - Grip Chassis
+
+77875 - Ghost Volume, Throttle Body
+```
