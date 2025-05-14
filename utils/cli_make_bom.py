@@ -25,41 +25,159 @@ def find_metadata_files(project_root):
                 metadata_files.append(metadata_path)
     return metadata_files
 
+# New helper function to recursively build the tree string for a given part
+def _build_tree_recursive_str(part_number, parts_data, level, visited_for_path):
+    part_info = parts_data.get(part_number)
+
+    if not part_info:
+        return "  " * level + f"* {part_number} - [Data Missing for this Part]\n"
+
+    if part_number in visited_for_path:
+        display_name_cycle = part_info.get('name', '[Name Missing]')
+        return "  " * level + f"* {part_number} - {display_name_cycle} ... [Circular reference detected]\n"
+    
+    visited_for_path.add(part_number)
+    
+    display_name = part_info.get('name', '[Name Missing]')
+    full_display_name = f"{part_number} - {display_name}"
+
+    tree_str = "  " * level + f"* {full_display_name}\n"
+    
+    # Ensure children are sorted for consistent output, e.g., by part number
+    sorted_children = sorted(part_info.get('children', []))
+
+    for child_pn in sorted_children:
+        tree_str += _build_tree_recursive_str(child_pn, parts_data, level + 1, visited_for_path.copy())
+            
+    return tree_str
+
+# New function to generate the Markdown section for the part assembly tree
+def generate_part_tree_markdown_section(bom_items_list):
+    part_tree_md = "\n## Part Assembly Tree\n\n"
+    
+    if not bom_items_list:
+        part_tree_md += "No parts data available to build a tree.\n"
+        return part_tree_md
+
+    parts_data = {}
+    # Initial population of parts_data from actual metadata
+    for item in bom_items_list:
+        pn = str(item.get('part_number', 'N/A'))
+        if pn == 'N/A': continue
+        parts_data[pn] = {
+            'name': item.get('name', '[No Name]'),
+            'parent_assembly': str(item.get('parent_assembly')) if item.get('parent_assembly') is not None and str(item.get('parent_assembly')).strip() != "" else 'None',
+            'children': [],
+            'is_placeholder': False 
+        }
+
+    # Second pass to build hierarchy and create placeholders for missing parents
+    all_part_numbers_from_metadata = set(parts_data.keys())
+    
+    for pn_from_meta in list(all_part_numbers_from_metadata): 
+        # Ensure we are working with a part that was definitely loaded from metadata
+        if pn_from_meta not in parts_data or parts_data[pn_from_meta].get('is_placeholder', True):
+            continue # Skip if it became a placeholder or was removed
+
+        data = parts_data[pn_from_meta]
+        parent_pn_str = data['parent_assembly']
+
+        if parent_pn_str != 'None':
+            if parent_pn_str not in parts_data: # If parent doesn't exist, create as placeholder
+                parts_data[parent_pn_str] = {
+                    'name': '[External/Missing Parent]',
+                    'parent_assembly': 'None', 
+                    'children': [pn_from_meta],
+                    'is_placeholder': True
+                }
+            else: # Parent exists, add current part as its child
+                if pn_from_meta not in parts_data[parent_pn_str]['children']:
+                     parts_data[parent_pn_str]['children'].append(pn_from_meta)
+    
+    # Identify root nodes (parts that are not children of any other part)
+    all_child_pns = set()
+    for pn_key in parts_data:
+        for child_pn in parts_data[pn_key].get('children', []):
+            all_child_pns.add(child_pn)
+            
+    root_pns = []
+    for pn_key in parts_data:
+        if pn_key not in all_child_pns:
+            root_pns.append(pn_key)
+    
+    # Sort root part numbers for consistent output
+    sorted_root_pns = sorted(list(set(root_pns)))
+
+    if not sorted_root_pns:
+        if parts_data: # If there is data but no roots, could be all children or a cycle
+            part_tree_md += "No top-level assemblies identified. All parts may be interconnected or form cycles.\n"
+        else:
+             part_tree_md += "No parts data to build tree from.\n"
+    else:
+        for root_pn in sorted_root_pns:
+            part_tree_md += _build_tree_recursive_str(root_pn, parts_data, 0, set())
+            
+    return part_tree_md
+
 def generate_bom_markdown(metadata_files):
-    """Generates a Markdown BOM from a list of metadata files."""
-    bom_items = []
+    """Generates a Markdown BOM and Part Tree from a list of metadata files."""
+    bom_items_list = []
     for mf_path in metadata_files:
         try:
             with open(mf_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
                 if data:
-                    bom_items.append({
+                    # Ensure parent_assembly is read as a string, handle None or empty
+                    parent_assembly_raw = data.get('parent_assembly')
+                    parent_assembly_str = str(parent_assembly_raw) if parent_assembly_raw is not None and str(parent_assembly_raw).strip() != "" else 'None'
+
+                    bom_items_list.append({
                         'part_number': str(data.get('part_number', 'N/A')),
                         'name': data.get('name', 'N/A'),
                         'description': data.get('description', 'N/A'),
-                        'quantity': data.get('quantity', 1), # Default to 1 if not specified
+                        'quantity': data.get('quantity', 1), 
                         'part_type': data.get('part_type', 'N/A'),
                         'primary_source': data.get('primary_source', 'N/A'),
                         'cost': data.get('cost', 'N/A'),
                         'owner': data.get('owner', 'N/A'),
-                        'status': data.get('status', 'N/A')
+                        'status': data.get('status', 'N/A'),
+                        'parent_assembly': parent_assembly_str
                     })
         except Exception as e:
             print(f"Warning: Could not process file {mf_path}: {e}")
 
-    if not bom_items:
-        return "# Bill of Materials\n\nNo parts found or metadata files are empty/corrupted.\n"
+    if not bom_items_list:
+        return """<!-- 
+THIS FILE IS AUTO-GENERATED BY THE cli_make_bom.py SCRIPT.
+DO NOT EDIT THIS FILE MANUALLY. YOUR CHANGES WILL BE OVERWRITTEN.
+-->
 
-    # Sort by part number
-    bom_items.sort(key=lambda x: x['part_number'])
+# Bill of Materials
 
-    # Create Markdown table
+Generated on: {datetime.date.today().isoformat()}
+
+No parts found or metadata files are empty/corrupted.
+"""
+
+    # Sort BOM items by part number for the table
+    bom_items_list.sort(key=lambda x: x['part_number'])
+
+    # Create Markdown table for BOM
     headers = ["Part Number", "Name", "Description", "Qty", "Part Type", "Primary Source", "Cost", "Owner", "Status"]
-    md_table = f"# Bill of Materials\n\nGenerated on: {datetime.date.today().isoformat()}\n\n"
-    md_table += "| " + " | ".join(headers) + " |\n"
-    md_table += "| " + " | ".join(["---"] * len(headers)) + " |\n"
+    md_output = f"""<!-- 
+THIS FILE IS AUTO-GENERATED BY THE cli_make_bom.py SCRIPT.
+DO NOT EDIT THIS FILE MANUALLY. YOUR CHANGES WILL BE OVERWRITTEN.
+-->
 
-    for item in bom_items:
+# Bill of Materials
+
+Generated on: {datetime.date.today().isoformat()}
+
+"""
+    md_output += "| " + " | ".join(headers) + " |\n"
+    md_output += "| " + " | ".join(["---"] * len(headers)) + " |\n"
+
+    for item in bom_items_list:
         row = [
             item['part_number'],
             item['name'],
@@ -71,9 +189,14 @@ def generate_bom_markdown(metadata_files):
             item['owner'],
             item['status']
         ]
-        md_table += "| " + " | ".join(row) + " |\n"
+        md_output += "| " + " | ".join(row) + " |\n"
     
-    return md_table
+    # Generate and append Part Tree section
+    # The bom_items_list already contains all necessary info including parent_assembly
+    part_tree_section_md = generate_part_tree_markdown_section(bom_items_list)
+    md_output += part_tree_section_md
+
+    return md_output
 
 def main():
     print("Bill of Materials Generator")
