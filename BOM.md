@@ -9,7 +9,8 @@ Generated on: 2025-05-13
 
 | Part Number | Name | Description | Qty | Part Type | Primary Source | Cost | Owner | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 32000 | Grip Chassis | Main chassis body for the throttle grip, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
+| 32001 | Grip Chassis Part 1 | Main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
+| 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 57832 | Grip Assembly | Complete assembly for the HSI Mk.1 grip | 1 | Assembly | Unknown | TBD | Kurisu | Draft |
 | 62146 | HoverStop HSI Mk.1 | The parent assembly for the HoverStop HSI Mk.1 throttle interface unit. | 1 | Assembly | Unknown | TBD | Engines | Draft |
 | 77875 | Ghost Volume, Throttle Body | A ghost part that represents the outside limits for the throttle body design. | 1 | None | Unknown | $0.00 | Xpendable | Prototype |
@@ -19,7 +20,8 @@ Generated on: 2025-05-13
 ```
 62146 - HoverStop HSI Mk.1
 └── 57832 - Grip Assembly
-    └── 32000 - Grip Chassis
+    ├── 32001 - Grip Chassis Part 1
+    └── 32002 - Grip Chassis Part 2
 
 77875 - Ghost Volume, Throttle Body
 ```
