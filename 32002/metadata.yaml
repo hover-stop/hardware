@@ -1,15 +1,17 @@
 part_number: 32002
 owner: Kurisu
+name: Grip Chassis, Part 2
 description: Second part of the main chassis body for the throttle grip, designed for either 3D printing or CNC machining
 parent_assembly: 31000
 status: Draft
 part_type: 3D Printed
 alternatives:
-    - description: Machined aluminum version
-      source: To be determined
+  - description: Machined aluminum version
+    source: To be determined
 primary_source: In-house prototype
 secondary_source: None yet
 cost: TBD
+quantity: 1
 contributors:
-    - Kurisu
-    - Engines
+  - Kurisu
+  - Engines
