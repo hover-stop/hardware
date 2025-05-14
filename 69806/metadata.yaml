@@ -1,0 +1,15 @@
+part_number: '69806'
+owner: Engines
+name: HSI Mk.1 Bits Kit
+description: All screws, nuts, rivets, inserts, and other consumables necessary to
+  build the HSI Mk.1
+parent_assembly: '62146'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

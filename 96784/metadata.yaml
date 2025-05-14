@@ -1,0 +1,16 @@
+part_number: '96784'
+owner: Xpendable
+name: Body Assembly
+description: The body assembly for the HSI Mk.1
+parent_assembly: '62146'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines
+- Carpet3
+- Boggy
