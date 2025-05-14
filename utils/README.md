@@ -33,7 +33,7 @@ Before running any utility scripts for the first time, you need to set up a Pyth
 5.  **Install required packages:**
     With the virtual environment active, run the following command to install the necessary Python libraries:
     ```sh
-    pip install PyYAML
+    pip install PyYAML jsonschema
     ```
 
 You only need to perform these setup steps once. For subsequent uses, you just need to activate the virtual environment (step 4) before running a script.
@@ -82,3 +82,37 @@ This helps ensure consistency and reduces manual effort when adding new hardware
     ```
 
 Example: If the script generates part number `12345`, it will create a directory `../12345/` and `../12345/metadata.yaml`.
+
+## `cli_validate_metadata.py`
+
+### Purpose
+
+The `cli_validate_metadata.py` script is a command-line tool used to validate all `metadata.yaml` files within the project against a defined schema. This helps ensure consistency and correctness of the metadata across all parts.
+
+The script checks for:
+1.  Correct YAML format.
+2.  Adherence to a predefined schema (e.g., required fields, correct data types, allowed values for certain fields like `status` and `part_type`).
+3.  Consistency between the `part_number` field in the `metadata.yaml` file and its parent directory name.
+
+### How to Use
+
+1.  **Ensure `jsonschema` is installed:** If you haven't already, install it with the virtual environment active:
+    ```sh
+    pip install jsonschema
+    ```
+2.  **Open your terminal or command prompt.**
+3.  **Navigate to the `utils` directory** within this project:
+    ```sh
+    cd path\to\hardware\utils
+    ```
+4.  **Activate the Python virtual environment** (if not already active - see Environment Setup).
+5.  **Run the script** using Python:
+    ```sh
+    python cli_validate_metadata.py
+    ```
+6.  The script will output the validation status for each `metadata.yaml` file found. If errors are present, they will be detailed, indicating the file, the location of the error within the file, and the nature of the error.
+7.  A summary of the validation results will be printed at the end.
+8.  **Deactivate the virtual environment** when you are done (optional but good practice):
+    ```sh
+    deactivate
+    ```

@@ -5,10 +5,11 @@ description: A ghost part that represents the outside limits for the throttle bo
   design.
 parent_assembly: None
 status: Prototype
-part_type: None
+part_type: Ghost
 alternatives: []
 primary_source: Unknown
 secondary_source: None yet
 cost: $0.00
+quantity: 1
 contributors:
 - Xpendable
