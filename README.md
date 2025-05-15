@@ -28,6 +28,7 @@ Example folder structure:
   ├── 12345-Mounting Bracket.step
   ├── 12345-Mounting Bracket.3mf
   ├── metadata.yaml
+  ├── REQUIREMENTS.md  # Recommended: Part-specific requirements
   └── 12345-Mounting Bracket.pdf (drawing)
 ```
 
@@ -56,6 +57,47 @@ contributors:
   - "Engines"
   - "Carpet3"
 ```
+
+---
+
+## Part Requirements Documentation (Recommended)
+
+It is highly recommended to include a `REQUIREMENTS.md` file within each part's directory. This file should summarize the key design, functional, physical, and manufacturing requirements for that specific part. 
+
+This practice helps ensure clarity on the part's purpose and constraints, aiding in design, review, and future modifications.
+
+An example structure for `REQUIREMENTS.md` could be:
+
+```markdown
+# Requirements for [Part Number] - [Part Name]
+
+This document outlines the key design and functional requirements for the [Part Name] (Part Number [Part Number]).
+
+## Functional Requirements
+
+1.  **Primary Function:** [Description]
+2.  **Interaction with Other Parts:** [Details]
+3.  **Performance Metric 1:** [Target]
+
+## Physical & Manufacturing Requirements
+
+1.  **Material:** [Specified material]
+2.  **Manufacturing Process:** [e.g., 3D Printed, Machined]
+3.  **Key Dimensions/Tolerances:** [Details]
+4.  **Constraint 1:** [e.g., Max weight, size envelope]
+
+## Assembly & Hierarchy
+
+1.  **Parent Assembly:** [Part Number of parent assembly]
+2.  **Mounting Method:** [How it attaches]
+
+## Serviceability & Durability
+
+1.  **Expected Lifespan:** [Time/cycles]
+2.  **Maintenance Needs:** [Details]
+```
+
+This template can be adapted as needed for the specific part.
 
 ---
 
