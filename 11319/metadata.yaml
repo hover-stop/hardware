@@ -1,0 +1,16 @@
+part_number: '11319'
+owner: Xpendable
+name: Throttle Body Bottom Plate
+description: 'Structural base of the HSI Mk.1 throttle body. Top facia panels and
+  internal mechanisms attach to this plate. Designed for multiple mounting options:
+  via 42807 Mounting Tray (for enclosures), DZUS rails, or custom flat panel.'
+parent_assembly: '96784'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Xpendable

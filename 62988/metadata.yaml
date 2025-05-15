@@ -1,0 +1,16 @@
+part_number: '62988'
+owner: Xpendable
+name: HSI Mk.1 Mounting Kit
+description: Optional mounting kit for installing the HSI Mk.1 throttle (via its Body
+  Assembly) into an enclosure. Includes the mounting tray (42807) and any associated
+  hardware for this specific mounting method.
+parent_assembly: '62146'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Xpendable
