@@ -2,7 +2,8 @@ import os
 import sys
 import datetime
 import random # Added import for random number generation
-import argparse # Added for command-line argument parsing
+import argparse # Ensure argparse is imported
+
 # Ensure PyYAML is installed: pip install PyYAML
 try:
     import yaml
@@ -170,6 +171,19 @@ def prompt_for_metadata(part_number_str, cloned_metadata=None):
 def main():
     parser = argparse.ArgumentParser(description="Hardware Part Creator Utility")
     parser.add_argument("--clone", type=str, help="Part number to clone metadata from (e.g., 12345)")
+    # Arguments for non-interactive creation
+    parser.add_argument("--owner", type=str, help="Owner of the part (e.g., Kurisu)")
+    parser.add_argument("--name", type=str, help="Part Name (e.g., Main Body)")
+    parser.add_argument("--description", type=str, help="Description of the part")
+    parser.add_argument("--parent_assembly", type=str, help="Parent Assembly (e.g., 31000, or 'None')")
+    parser.add_argument("--status", type=str, help="Status (e.g., Draft, Prototype, Release)")
+    parser.add_argument("--part_type", type=str, help="Part Type (e.g., 3D Printed, Machined, COTS)")
+    parser.add_argument("--primary_source", type=str, help="Primary Source (e.g., In-house prototype, Vendor XYZ)")
+    parser.add_argument("--secondary_source", type=str, help="Secondary Source (or 'None yet')")
+    parser.add_argument("--cost", type=str, help="Cost (e.g., TBD, $10.50)")
+    parser.add_argument("--quantity", type=int, help="Quantity (integer, minimum 1)")
+    parser.add_argument("--contributors", nargs='+', help="List of contributors (e.g., Kurisu Xpendable)")
+
     args = parser.parse_args()
 
     print("Hardware Part Creator Utility")
@@ -180,29 +194,12 @@ def main():
     project_root = get_project_root()
     print(f"Project root identified as: {project_root}")
 
-    cloned_data = None
-    if args.clone:
-        print(f"\nAttempting to clone metadata from part number: {args.clone}")
-        if not (args.clone.isdigit() and len(args.clone) == 5):
-            print(f"Error: Cloned part number '{args.clone}' must be a 5-digit number.")
-            sys.exit(1)
-        
-        clone_metadata_path = os.path.join(project_root, args.clone, 'metadata.yaml')
-        cloned_data = load_metadata(clone_metadata_path)
-        if cloned_data:
-            print(f"Successfully loaded metadata from {args.clone}.")
-            # Remove part_number from cloned data so it doesn't overwrite the new one by mistake
-            if 'part_number' in cloned_data:
-                del cloned_data['part_number'] 
-        else:
-            print(f"Warning: Could not load metadata from part {args.clone}. Proceeding without defaults.")
-
     existing_parts = get_existing_part_numbers(project_root)
     print(f"Found existing part numbers: {sorted(list(existing_parts)) if existing_parts else 'None'}")
 
     new_part_number = generate_unique_part_number(existing_parts)
     part_number_str = str(new_part_number)
-    print(f"\nGenerated new part number: {part_number_str}")
+    # No print here for generated number yet, will be printed after confirmation or if interactive
 
     part_dir_path = os.path.join(project_root, part_number_str)
 
@@ -210,7 +207,51 @@ def main():
         print(f"Error: Directory {part_dir_path} already exists. This should not happen if generation logic is correct.")
         sys.exit(1)
 
-    metadata = prompt_for_metadata(part_number_str, cloned_data)
+    metadata = None
+    # Check if essential arguments for non-interactive creation are provided
+    if args.name and args.owner and args.description: # Using these as key indicators
+        print(f"\\nAttempting non-interactive part creation for: {args.name}")
+        print(f"Generated new part number: {part_number_str}")
+
+        metadata = {
+            'part_number': part_number_str,
+            'owner': args.owner,
+            'name': args.name,
+            'description': args.description,
+            'parent_assembly': args.parent_assembly if args.parent_assembly is not None else "None",
+            'status': args.status if args.status is not None else "Draft",
+            'part_type': args.part_type if args.part_type is not None else "3D Printed",
+            'alternatives': [], # Defaults to empty for non-interactive
+            'primary_source': args.primary_source if args.primary_source is not None else "Unknown",
+            'secondary_source': args.secondary_source if args.secondary_source is not None else "None yet",
+            'cost': args.cost if args.cost is not None else "TBD",
+            # Ensure quantity is at least 1, default to 1 if not specified or invalid
+            'quantity': args.quantity if args.quantity is not None and args.quantity >= 1 else 1,
+            'contributors': args.contributors if args.contributors else ([args.owner] if args.owner else [])
+        }
+    else:
+        # Fallback to interactive mode (with potential cloning)
+        print(f"\\nGenerated new part number: {part_number_str}") # Print here for interactive mode
+        print("Required arguments for non-interactive mode not fully provided. Proceeding with interactive mode.")
+        cloned_data = None
+        if args.clone:
+            print(f"\\nAttempting to clone metadata from part number: {args.clone}")
+            if not (args.clone.isdigit() and len(args.clone) == 5):
+                print(f"Error: Cloned part number '{args.clone}' must be a 5-digit number.")
+                # Decide if to exit or proceed interactively without clone
+                # For now, proceed without clone if clone ID is invalid
+                print("Proceeding with fresh interactive input.")
+            else:
+                clone_metadata_path = os.path.join(project_root, args.clone, 'metadata.yaml')
+                cloned_data = load_metadata(clone_metadata_path)
+                if cloned_data:
+                    print(f"Successfully loaded metadata from {args.clone} to use as defaults.")
+                    if 'part_number' in cloned_data:
+                        del cloned_data['part_number'] 
+                else:
+                    print(f"Warning: Could not load metadata from part {args.clone}. Proceeding with fresh interactive input.")
+        
+        metadata = prompt_for_metadata(part_number_str, cloned_data)
 
     try:
         os.makedirs(part_dir_path)

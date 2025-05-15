@@ -1,0 +1,16 @@
+part_number: '42807'
+owner: Xpendable
+name: Mounting Tray
+description: Central mounting structure for facia panels, throttle, nozzle, electronics,
+  and other assemblies. Designed for 3D printing and serviceability with heat-set
+  inserts. Fits within 77875 ghost volume and is part of 96784 Body Assembly.
+parent_assembly: '96784'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Xpendable
