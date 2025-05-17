@@ -10,6 +10,7 @@ Generated on: 2025-05-17
 | Part Number | Name | Description | Qty | Part Type | Primary Source | Cost | Owner | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11319 | Throttle Body Bottom Plate | Structural base of the HSI Mk.1 throttle body. Top facia panels and internal mechanisms attach to this plate. Designed for multiple mounting options: via 42807 Mounting Tray (for enclosures), DZUS rails, or custom flat panel. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
+| 14619 | Ghost Volume, Throttle Body, Inner | A ghost part that represents the inside limits for the throttle body desgin. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 32001 | Grip Chassis Part 1 | Main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 42807 | Mounting Tray | Mounting tray (purple brace) for securing the HSI Mk.1 Body Assembly (96784) within an enclosure. This part is used when the enclosure mounting option is chosen and takes the place of DZUS rails. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
@@ -18,8 +19,9 @@ Generated on: 2025-05-17
 | 62988 | Mounting Kit | Optional mounting kit for installing the HSI Mk.1 throttle (via its Body Assembly) into an enclosure. Includes the mounting tray (42807) and any associated hardware for this specific mounting method. | 1 | Assembly | In-house design | TBD | Xpendable | Draft |
 | 67367 | Dzus Rail | Quick release mounting rail for Dzus fasteners | 2 | Off The Shelf | Unknown | TBD | Xpendable | Draft |
 | 69806 | Bits Kit | All screws, nuts, rivets, inserts, and other consumables necessary to build the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Engines | Draft |
-| 77875 | Ghost Volume, Throttle Body | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
+| 77875 | Ghost Volume, Throttle Body, Outer | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 96784 | Body Assembly | The body assembly for the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Xpendable | Draft |
+| 98415 | Ghost Parts | A collector assembly for all ghost parts used in the HSI Mk.1 | 1 | Ghost | Unknown | TBD | Engines | Draft |
 
 ## Part Assembly Tree
 
@@ -32,8 +34,9 @@ Generated on: 2025-05-17
 │   ├── 42807 - Mounting Tray
 │   └── 67367 - Dzus Rail
 ├── 69806 - Bits Kit
-└── 96784 - Body Assembly
-    └── 11319 - Throttle Body Bottom Plate
-
-77875 - Ghost Volume, Throttle Body
+├── 96784 - Body Assembly
+│   └── 11319 - Throttle Body Bottom Plate
+└── 98415 - Ghost Parts
+    ├── 14619 - Ghost Volume, Throttle Body, Inner
+    └── 77875 - Ghost Volume, Throttle Body, Outer
 ```

@@ -1,0 +1,14 @@
+part_number: '98415'
+owner: Engines
+name: Ghost Parts
+description: A collector assembly for all ghost parts used in the HSI Mk.1
+parent_assembly: '62146'
+status: Draft
+part_type: Ghost
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Xpendable

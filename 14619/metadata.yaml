@@ -1,8 +1,8 @@
-part_number: '77875'
+part_number: '14619'
 owner: Xpendable
-name: Ghost Volume, Throttle Body, Outer
-description: A ghost part that represents the outside limits for the throttle body
-  design.
+name: Ghost Volume, Throttle Body, Inner
+description: A ghost part that represents the inside limits for the throttle body
+  desgin.
 parent_assembly: '98415'
 status: Prototype
 part_type: Ghost
