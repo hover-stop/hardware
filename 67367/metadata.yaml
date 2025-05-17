@@ -1,0 +1,14 @@
+part_number: '67367'
+owner: Xpendable
+name: Dzus Rail
+description: Quick release mounting rail for Dzus fasteners
+parent_assembly: '62988'
+status: Draft
+part_type: Off The Shelf
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 2
+contributors:
+- Xpendable

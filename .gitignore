@@ -7,3 +7,6 @@
 # Python cache
 __pycache__/
 *.pyc
+
+# Ignore LLM onboarding prompt file (used for agent/LLM context only)
+LLM_PROJECT_PROMPT.md
