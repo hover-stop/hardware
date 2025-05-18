@@ -1,0 +1,15 @@
+part_number: '81137'
+owner: Engines
+name: Wiring Harness
+description: Complete wiring harness for connecting all electronic components and
+  sensors in the HSI Mk.1.
+parent_assembly: '11117'
+status: Draft
+part_type: Cable or Wire
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

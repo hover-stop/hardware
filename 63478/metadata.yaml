@@ -1,0 +1,17 @@
+part_number: '63478'
+owner: Engines
+name: Toggle Switch, 3 Position
+description: 3-position, rounded, momentary, DPDT toggle switch with IP67 rating.
+  Used for the Rudder Trim control in the HSI Mk.1.
+parent_assembly: '51364'
+status: Release
+part_type: Electronics
+alternatives:
+  - description: MIL-SPEC Toggle Switch for Rudder Trim (Original Specification)
+    source: https://www.tti.com/content/ttiinc/en/apps/part-detail.html?partsNumber=MS24524-27&mfgShortname=HON&srsltid=AfmBOop1To8YyhVWOPa2WTmn_ewABYfWRfsCgOKYo1a-vlAqRyDzrHWh
+primary_source: https://www.mcmaster.com/8002K116/
+secondary_source: https://www.digikey.com/short/dz8cb3wh
+cost: '18.13'
+quantity: 1
+contributors:
+- Engines

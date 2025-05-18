@@ -1,0 +1,16 @@
+part_number: '23794'
+owner: Engines
+name: Angle Sensor, Hall Effect
+description: CALT P3022C360V1T (alt P3022C90V1T) miniature non-contact hall effect
+  angle sensor for precision rotary position measurement. Used for axis position sensing
+  in the HSI Mk.1.
+parent_assembly: '51364'
+status: Release
+part_type: Electronics
+alternatives: []
+primary_source: https://caltsensor.com/product/miniature-non-contact-angle-sensor-p3022-series/
+secondary_source: https://a.co/d/a8b02RU
+cost: TBD
+quantity: 3
+contributors:
+- Engines

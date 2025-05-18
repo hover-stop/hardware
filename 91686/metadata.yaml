@@ -1,0 +1,15 @@
+part_number: '91686'
+owner: Engines
+name: Controller Board
+description: Main microcontroller board for the HSI Mk.1. Responsible for reading
+  sensor inputs and communicating with the flight simulator software.
+parent_assembly: '11117'
+status: Draft
+part_type: Electronics
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

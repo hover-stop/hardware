@@ -9,17 +9,24 @@ Generated on: 2025-05-17
 
 | Part Number | Name | Description | Qty | Part Type | Primary Source | Cost | Owner | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11117 | Electronics Assembly | Assembly of all electronic components, sensors, controllers, and wiring harnesses for the HSI Mk.1. | 1 | Assembly | In-house design | TBD | Engines | Draft |
 | 11319 | Throttle Body Bottom Plate | Structural base of the HSI Mk.1 throttle body. Top facia panels and internal mechanisms attach to this plate. Designed for multiple mounting options: via 42807 Mounting Tray (for enclosures), DZUS rails, or custom flat panel. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
 | 14619 | Ghost Volume, Throttle Body, Inner | A ghost part that represents the inside limits for the throttle body desgin. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
+| 23794 | P3022 Hall Effect Angle Sensor | CALT P3022C360V1T (alt P3022C90V1T) miniature non-contact hall effect angle sensor for precision rotary position measurement. Used for axis position sensing in the HSI Mk.1. | 3 | Electronics | https://caltsensor.com/product/miniature-non-contact-angle-sensor-p3022-series/ | TBD | Engines | Release |
 | 32001 | Grip Chassis Part 1 | Main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 42807 | Mounting Tray | Mounting tray (purple brace) for securing the HSI Mk.1 Body Assembly (96784) within an enclosure. This part is used when the enclosure mounting option is chosen and takes the place of DZUS rails. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
+| 51364 | Sensors Kit | Collection of sensors used in the HSI Mk.1, including hall effect potentiometers for axis position sensing. | 1 | Assembly | In-house design | TBD | Engines | Draft |
+| 56865 | Toggle Switch, 2 Position | 2-position, round, maintained, SPST-NO toggle switch with 2 terminals, 6A rating. Used for Jet Pipe Temp Limit (JPTL) and Manual Fuel Control functions in the HSI Mk.1. | 2 | Electronics | https://www.mcmaster.com/7343K184/ | 8.96 | Engines | Release |
 | 57832 | Grip Assembly | Complete assembly for the HSI Mk.1 grip | 1 | Assembly | Unknown | TBD | Kurisu | Draft |
 | 62146 | HoverStop HSI Mk.1 | The parent assembly for the HoverStop HSI Mk.1 throttle interface unit. | 1 | Assembly | Unknown | TBD | Engines | Draft |
 | 62988 | Mounting Kit | Optional mounting kit for installing the HSI Mk.1 throttle (via its Body Assembly) into an enclosure. Includes the mounting tray (42807) and any associated hardware for this specific mounting method. | 1 | Assembly | In-house design | TBD | Xpendable | Draft |
+| 63478 | Toggle Switch, 3 Position | 3-position, rounded, momentary, DPDT toggle switch with IP67 rating. Used for the Rudder Trim control in the HSI Mk.1. | 1 | Electronics | https://www.mcmaster.com/8002K116/ | 18.13 | Engines | Draft |
 | 67367 | Dzus Rail | Quick release mounting rail for Dzus fasteners | 2 | Off The Shelf | Unknown | TBD | Xpendable | Draft |
 | 69806 | Bits Kit | All screws, nuts, rivets, inserts, and other consumables necessary to build the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Engines | Draft |
 | 77875 | Ghost Volume, Throttle Body, Outer | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
+| 81137 | Wiring Harness | Complete wiring harness for connecting all electronic components and sensors in the HSI Mk.1. | 1 | Cable or Wire | In-house design | TBD | Engines | Draft |
+| 91686 | Controller Board | Main microcontroller board for the HSI Mk.1. Responsible for reading sensor inputs and communicating with the flight simulator software. | 1 | Electronics | In-house design | TBD | Engines | Draft |
 | 96784 | Body Assembly | The body assembly for the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Xpendable | Draft |
 | 98415 | Ghost Parts | A collector assembly for all ghost parts used in the HSI Mk.1 | 1 | Ghost | Unknown | TBD | Engines | Draft |
 
@@ -27,6 +34,13 @@ Generated on: 2025-05-17
 
 ```
 62146 - HoverStop HSI Mk.1
+├── 11117 - Electronics Assembly
+│   ├── 51364 - Sensors Kit
+│   │   ├── 23794 - P3022 Hall Effect Angle Sensor
+│   │   ├── 56865 - Toggle Switch, 2 Position
+│   │   └── 63478 - Toggle Switch, 3 Position
+│   ├── 81137 - Wiring Harness
+│   └── 91686 - Controller Board
 ├── 57832 - Grip Assembly
 │   ├── 32001 - Grip Chassis Part 1
 │   └── 32002 - Grip Chassis Part 2

@@ -1,0 +1,20 @@
+part_number: '56865'
+owner: Engines
+name: Toggle Switch, 2 Position
+description: 2-position, round, maintained, SPST-NO toggle switch with 2 terminals,
+  6A rating. Used for Jet Pipe Temp Limit (JPTL) and Manual Fuel Control functions
+  in the HSI Mk.1.
+parent_assembly: '51364'
+status: Release
+part_type: Electronics
+alternatives:
+  - description: MIL-SPEC Toggle Switch for Jet Pipe Temp Limit (JPTL)
+    source: https://www.mcmaster.com/6D1-002M (MS24523-22, $39.83)
+  - description: MIL-SPEC Toggle Switch for Manual Fuel Control
+    source: https://www.mcmaster.com/6D1-002M (MS24658-22G, $39.83)
+primary_source: https://www.mcmaster.com/7343K184/
+secondary_source: https://www.digikey.com/en/products/detail/switch-components/TA2-1A-DC-5/11493033
+cost: '8.96'
+quantity: 2
+contributors:
+- Engines

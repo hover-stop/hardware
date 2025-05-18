@@ -1,0 +1,15 @@
+part_number: '11117'
+owner: Engines
+name: Electronics Assembly
+description: Assembly of all electronic components, sensors, controllers, and wiring
+  harnesses for the HSI Mk.1.
+parent_assembly: '62146'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

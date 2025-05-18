@@ -1,0 +1,15 @@
+part_number: '51364'
+owner: Engines
+name: Sensors Kit
+description: Collection of sensors used in the HSI Mk.1, including hall effect potentiometers
+  for axis position sensing.
+parent_assembly: '11117'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: In-house design
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines
