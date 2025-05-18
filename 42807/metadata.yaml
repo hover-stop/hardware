@@ -1,9 +1,8 @@
 part_number: '42807'
 owner: Xpendable
-name: Mounting Tray
-description: Mounting tray (purple brace) for securing the HSI Mk.1 Body Assembly (96784)
-  within an enclosure. This part is used when the enclosure mounting option is chosen
-  and takes the place of DZUS rails.
+name: Case Adapter
+description: Case adapter (purple brace) for securing the HSI Mk.1 Body Assembly (96784)
+  to a case.
 parent_assembly: '62988'
 status: Draft
 part_type: 3D Printed
