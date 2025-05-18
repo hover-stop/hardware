@@ -1,27 +1,33 @@
-# Requirements for 42807 - Mounting Tray (Purple Brace)
+# Requirements for 42807 - Case Adapter (formerly "Mounting Tray" / "Purple Brace")
 
-This document outlines the key design and functional requirements for the Mounting Tray (Part Number 42807), also referred to as the "purple brace". This tray is specifically used when mounting the HSI Mk.1 throttle assembly within a custom enclosure.
+This document outlines the key design and functional requirements for the **Case Adapter** (Part Number 42807), which is used when mounting the HSI Mk.1 throttle assembly inside a custom enclosure. This adapter interfaces between the enclosure and the base plate but **does not support** the throttle body directly.
 
 ## Functional Requirements
 
-1.  **Enclosure Mounting Interface:** Shall serve as the structural interface between the HSI Mk.1 `96784 - Body Assembly` (specifically, its bottom plate) and a custom enclosure.
-2.  **Replaces Rails for Enclosure Use:** When this tray is used, DZUS rails are not needed for mounting the throttle body. This tray provides the necessary support and attachment points within the enclosure.
-3.  **Serviceability:** Must allow for the HSI Mk.1 Body Assembly to be installed and removed from the enclosure without damaging the tray or the enclosure.
-4.  **Rigidity:** Must provide a rigid and stable platform for the HSI Mk.1 Body Assembly when installed in an enclosure.
-5.  **Clearance for Components:** Must provide adequate openings and clearances for any cables or components protruding from the bottom of the HSI Mk.1 Body Assembly.
+1. **Enclosure Mounting Interface:** Shall provide a rigid mounting surface for custom enclosure side panels to attach to, enabling enclosed use of the HSI Mk.1 throttle system.
+2. **Supports Base Plate, Not Throttle:** Does **not** directly support the `96784 - Body Assembly` (i.e., the throttle mechanism). Instead, the base plate rests on top of this adapter.
+3. **Replaces DZUS Rails in Case Use:** When this adapter is used, DZUS rails are not required. It fulfills the structural interface role within enclosed applications.
+4. **Serviceability:** Must allow the HSI Mk.1 base plate (with attached throttle components) to be installed or removed without damage to the case or adapter.
+5. **Clearance:** Must not interfere with components protruding below the base plate (e.g., wiring, connectors).
 
 ## Physical & Manufacturing Requirements
 
-1.  **3D Printability:** Must be manufacturable as a single piece via 3D printing on a print bed with dimensions of at least 256x256mm (if applicable, or specify other manufacturing process).
-2.  **Material:** To be specified (e.g., PETG, ABS, PLA+).
-3.  **Dimensional Constraints:** Overall dimensions must be compatible with the intended enclosure design and the `77875 - Ghost Volume, Throttle Body` if it represents the enclosure's internal space.
+1. **3D Printability:** Must be manufacturable as a single piece via 3D printing on beds with dimensions ≥256x256mm.
+2. **Material:** To be determined (recommended: PETG or ABS for structural integrity).
+3. **Dimensional Fit:** Overall dimensions must align with the internal volume defined by `77875 - Ghost Volume, Throttle Body`, and allow the base plate to sit flush above it.
 
 ## Assembly & Hierarchy
 
-1.  **Parent Assembly:** This part is a component of `62988 - HSI Mk.1 Mounting Kit`.
-2.  **Mounting Method:** Attaches to the custom enclosure structure (method to be defined) and provides mounting points for the HSI Mk.1 `96784 - Body Assembly` (via its bottom plate).
+1. **Parent Assembly:** Component of `62988 - HSI Mk.1 Mounting Kit`.
+2. **Mounting Method:** Attaches to the enclosure structure. Provides a support interface for the `Base Plate` (separately defined), not for the `96784 - Body Assembly` directly.
+
+## Naming and Clarification
+
+* This part shall be referred to as the **Case Adapter**.
+* It is **not** to be confused with the **Base Plate** (which the throttle assembly bolts to).
+* The **Base Plate** is a separate part that sits on top of this adapter inside the enclosure.
 
 ## Exclusions
 
-*   This part is **not** used if the HSI Mk.1 throttle is mounted using DZUS rails.
-*   This part is **not** used if the HSI Mk.1 throttle is mounted directly to a custom panel (e.g., a sheet of wood/MDF) without an enclosure.
+* Not used if throttle is mounted using DZUS rails or custom mounting rails.
+* Not used if the throttle is panel-mounted directly to a desk, MDF, or cockpit structure.
