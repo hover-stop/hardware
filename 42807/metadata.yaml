@@ -3,7 +3,7 @@ owner: Xpendable
 name: Case Adapter
 description: Case adapter (purple brace) for securing the HSI Mk.1 Body Assembly (96784)
   to a case.
-parent_assembly: '62988'
+parent_assembly: '96784'
 status: Draft
 part_type: 3D Printed
 alternatives: []
