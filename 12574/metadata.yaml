@@ -1,0 +1,18 @@
+part_number: '12574'
+owner: Engines
+name: Hex Head Screw, M4 x 20 mm, Class 8.8, Zinc-Plated Steel
+description: M4 × 20 mm hex-head screw, Class 8.8 steel, fully threaded (M4-0.7 mm,
+  Class 6h, right-hand). Head width 7 mm, height 2.8 mm; ISO 4017 / DIN 933 compliant.
+  Zinc-plated finish for mild corrosion resistance; 110 000 psi tensile strength,
+  Rockwell C21 hardness. Cost ≈ /usr/bin/bash.02 ea (pack of 100). RoHS 3 and REACH
+  compliant.
+parent_assembly: '69806'
+status: Draft
+part_type: Off The Shelf
+alternatives: []
+primary_source: https://www.mcmaster.com/91280A140/
+secondary_source: None yet
+cost: TBD
+quantity: 6
+contributors:
+- Engines

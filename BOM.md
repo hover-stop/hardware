@@ -17,6 +17,7 @@ Generated on: 2025-05-26
 | 23794 | Angle Sensor, Hall Effect | CALT P3022C360V1T (alt P3022C90V1T) miniature non-contact hall effect angle sensor for precision rotary position measurement. Used for axis position sensing in the HSI Mk.1. | 3 | Electronics | https://caltsensor.com/product/miniature-non-contact-angle-sensor-p3022-series/ | TBD | Engines | Release |
 | 28175 | Brush, Throttle | Brush strip used to seal the opening in the throttle body where the throttle lever protrudes. | 2 | Off The Shelf | https://www.mcmaster.com/74405T1-74405T109/ | $2.75 | Engines | Release |
 | 31074 | Angle Sensor, Retaining Plate | This is the plate that retains the attachment plate of the angle sensor in the throttle support frame | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
+| 31612 | Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel | M8 × 25 mm flat-head Phillips screw, zinc-plated steel, fully threaded (M8-1.25, Class 6h, right-hand). Head Ø 14.5 mm, head height 4 mm, 90 ° countersink, DIN 965 compliant, 60 000 psi tensile strength. Provides mild corrosion resistance; RoHS 3 and REACH compliant. | 1 | Off The Shelf | https://www.mcmaster.com/91420A530/ | $0.40 | Engines | Draft |
 | 32001 | Grip Chassis Part 1 | Main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 35582 | Angle Sensor, Attachment Plate | The moving plate that retains the angle sensor when it is mounted to the frame assembly. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
@@ -35,7 +36,7 @@ Generated on: 2025-05-26
 | 74933 | Friction Shoe | Friction shoe that fits inside the friction spur gear. | 4 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 77875 | Ghost Volume, Throttle Body, Outer | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 81137 | Wiring Harness | Complete wiring harness for connecting all electronic components and sensors in the HSI Mk.1. | 1 | Cable or Wire | In-house design | TBD | Engines | Draft |
-| 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | 3D Printed | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
+| 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | Off The Shelf | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
 | 91686 | Controller Board | Main microcontroller board for the HSI Mk.1. Responsible for reading sensor inputs and communicating with the flight simulator software. | 1 | Electronics | In-house design | TBD | Engines | Draft |
 | 96784 | Body Assembly | The body assembly for the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Xpendable | Draft |
 | 98415 | Ghost Parts | A collector assembly for all ghost parts used in the HSI Mk.1 | 1 | Ghost | Unknown | TBD | Engines | Draft |
@@ -57,6 +58,7 @@ Generated on: 2025-05-26
 ├── 62988 - Mounting Kit
 │   └── 67367 - Dzus Rail
 ├── 69806 - Bits Kit
+│   ├── 31612 - Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel
 │   ├── 39780 - Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel
 │   ├── 60550 - Nut, Locking, M8
 │   └── 87883 - Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel
