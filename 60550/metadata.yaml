@@ -1,0 +1,16 @@
+part_number: '60550'
+owner: Engines
+name: Nut, Locking, M8
+description: Low strength steel, zinc plated nyloc nut for M8x1.25 threads
+parent_assembly: '69806'
+status: Release
+part_type: Off The Shelf
+alternatives:
+- description: Any M8x1.25mm hex nyloc nut with 13mm face-to-face
+  source: To be determined
+primary_source: https://www.mcmaster.com/90631A115/
+secondary_source: None yet
+cost: $0.10
+quantity: 1
+contributors:
+- Engines
