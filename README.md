@@ -53,6 +53,17 @@ contributors:
 
 ---
 
+## Utility Scripts
+
+The `utils/` directory in this repository contains helpful command-line scripts to automate common tasks:
+
+*   **`cli_new_part.py`**: This script automates the creation of new part directories. It generates a unique random 5-digit part number, creates the correspondingly named folder, and populates it with a basic `metadata.yaml` file after prompting the user for necessary information.
+*   **`cli_make_bom.py`**: This script scans all part `metadata.yaml` files to generate a comprehensive Bill of Materials (`BOM.md`) in the project root. The `BOM.md` includes a table of all parts and a hierarchical Part Assembly Tree.
+
+For detailed instructions on setting up the Python environment for these scripts and their usage, please refer to the `utils/README.md` file.
+
+---
+
 ## Drawing Requirements
 
 * Every **part** must have a detailed drawing specifying:
@@ -74,9 +85,9 @@ Default tolerance: **±0.2mm** unless otherwise specified.
 
 ## Part Numbering
 
-* Every new part is assigned a **unique random 5-digit number**
-* Part numbers are maunaully assigned or created via command-line tool (coming soon)
-* Contributors must register new numbers to avoid collisions
+* Every new part is assigned a **unique random 5-digit number** using the `utils/cli_new_part.py` script.
+* This tool helps prevent part number collisions.
+* Contributors should use this script to ensure consistency when creating new parts.
 
 ---
 

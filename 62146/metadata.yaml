@@ -1,0 +1,15 @@
+part_number: '62146'
+owner: Engines
+name: HoverStop HSI Mk.1
+description: The parent assembly for the HoverStop HSI Mk.1 throttle interface unit.
+parent_assembly: None
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+contributors:
+- Xpendable
+- Kurisu
+- Carpet3

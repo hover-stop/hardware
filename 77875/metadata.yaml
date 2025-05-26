@@ -1,0 +1,14 @@
+part_number: '77875'
+owner: Xpendable
+name: Ghost Volume, Throttle Body
+description: A ghost part that represents the outside limits for the throttle body
+  design.
+parent_assembly: None
+status: Prototype
+part_type: None
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: $0.00
+contributors:
+- Xpendable

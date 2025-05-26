@@ -1,0 +1,14 @@
+part_number: '57832'
+owner: Kurisu
+name: Grip Assembly
+description: Complete assembly for the HSI Mk.1 grip
+parent_assembly: '62146'
+status: Draft
+part_type: Assembly
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+contributors:
+- Engines
+- Carpet3
