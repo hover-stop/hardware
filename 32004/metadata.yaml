@@ -1,0 +1,14 @@
+part_number: 32004
+owner: Kurisu
+description: Backing plate for the side buttons of the throttle grip, designed for either 3D printing or CNC machining
+parent_assembly: 32001
+status: Draft
+part_type: 3D Printed
+alternatives:
+    - description: Machined aluminum version
+      source: To be determined
+primary_source: In-house prototype
+secondary_source: None yet
+cost: TBD
+contributors:
+    - Kurisu
