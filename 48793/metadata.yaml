@@ -1,0 +1,17 @@
+part_number: '48793'
+owner: Engines
+name: Spur Gear, 66 T, Drum Brake
+description: '66-tooth spur gear (module 1.0, 20° pressure angle, 140 mm pitch Ø ≈
+  70 mm pitch radius). 3 mm drum band on OD for printed friction brake shoe. Material:
+  PETG or PA-CF, 3D-printed, face width 10 mm, reamed Ø12 mm bore with M4 setscrew
+  flat.'
+parent_assembly: '22357'
+status: Draft
+part_type: Printed Part
+alternatives: []
+primary_source: In-house additive manufacturing
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

@@ -1,0 +1,15 @@
+part_number: '18923'
+owner: Engines
+name: Spur Gear, Sensor
+description: The small spur gear that attaches to the angle sensor.  This is driven
+  by the levers.  It has a modulus of 0.8mm and 22 teeth.
+parent_assembly: '22357'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

@@ -1,0 +1,16 @@
+part_number: '87883'
+owner: Engines
+name: Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel
+description: M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded,
+  DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush
+  in countersunk holes.
+parent_assembly: 69806
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: https://www.mcmaster.com/91420A220/
+secondary_source: None yet
+cost: TBD
+quantity: 4
+contributors:
+- Engines
