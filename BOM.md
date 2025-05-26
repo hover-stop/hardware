@@ -11,19 +11,20 @@ Generated on: 2025-05-26
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 11117 | Electronics Assembly | Assembly of all electronic components, sensors, controllers, and wiring harnesses for the HSI Mk.1. | 1 | Assembly | In-house design | TBD | Engines | Draft |
 | 11319 | Throttle Body Bottom Plate | Structural base of the HSI Mk.1 throttle body. Top facia panels and internal mechanisms attach to this plate. Designed for multiple mounting options: via 42807 Mounting Tray (for enclosures), DZUS rails, or custom flat panel. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
+| 12574 | Hex Head Screw, M4 x 20 mm, Class 8.8, Zinc-Plated Steel | M4 × 20 mm hex-head screw, Class 8.8 steel, fully threaded (M4-0.7 mm, Class 6h, right-hand). Head width 7 mm, height 2.8 mm; ISO 4017 / DIN 933 compliant. Zinc-plated finish for mild corrosion resistance; 110 000 psi tensile strength, Rockwell C21 hardness. Cost ≈ /usr/bin/bash.02 ea (pack of 100). RoHS 3 and REACH compliant. | 6 | Off The Shelf | https://www.mcmaster.com/91280A140/ | TBD | Engines | Draft |
 | 14619 | Ghost Volume, Throttle Body, Inner | A ghost part that represents the inside limits for the throttle body desgin. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 18923 | Spur Gear, Sensor | The small spur gear that attaches to the angle sensor.  This is driven by the levers.  It has a modulus of 0.8mm and 22 teeth. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 22357 | Support Frame, Throttle | This is the main supporting frame that locates and retains the throttle mechanism. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 23794 | Angle Sensor, Hall Effect | CALT P3022C360V1T (alt P3022C90V1T) miniature non-contact hall effect angle sensor for precision rotary position measurement. Used for axis position sensing in the HSI Mk.1. | 3 | Electronics | https://caltsensor.com/product/miniature-non-contact-angle-sensor-p3022-series/ | TBD | Engines | Release |
 | 28175 | Brush, Throttle | Brush strip used to seal the opening in the throttle body where the throttle lever protrudes. | 2 | Off The Shelf | https://www.mcmaster.com/74405T1-74405T109/ | $2.75 | Engines | Release |
 | 31074 | Angle Sensor, Retaining Plate | This is the plate that retains the attachment plate of the angle sensor in the throttle support frame | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
-| 31612 | Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel | M8 × 25 mm flat-head Phillips screw, zinc-plated steel, fully threaded (M8-1.25, Class 6h, right-hand). Head Ø 14.5 mm, head height 4 mm, 90 ° countersink, DIN 965 compliant, 60 000 psi tensile strength. Provides mild corrosion resistance; RoHS 3 and REACH compliant. | 1 | Off The Shelf | https://www.mcmaster.com/91420A530/ | $0.40 | Engines | Draft |
+| 31612 | Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel | M8 × 25 mm flat-head Phillips screw, zinc-plated steel, fully threaded (M8-1.25, Class 6h, right-hand). Head Ø 14.5 mm, head height 4 mm, 90 ° countersink, DIN 965 compliant, 60 000 psi tensile strength. Provides mild corrosion resistance; RoHS 3 and REACH compliant. | 2 | Off The Shelf | https://www.mcmaster.com/91420A530/ | $0.40 | Engines | Draft |
 | 32001 | Grip Chassis Part 1 | Main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 35582 | Angle Sensor, Attachment Plate | The moving plate that retains the angle sensor when it is mounted to the frame assembly. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
-| 39780 | Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel | M4 x 30 mm pan head Phillips screw, zinc-plated steel, fully threaded, DIN 7985 and ISO 7045 compliant. Provides mild corrosion resistance. | 1 | Off The Shelf | https://www.mcmaster.com/ | TBD | Engines | Draft |
+| 39780 | Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel | M4 x 30 mm pan head Phillips screw, zinc-plated steel, fully threaded, DIN 7985 and ISO 7045 compliant. Provides mild corrosion resistance. | 1 | Off The Shelf | https://www.mcmaster.com/92005A232/ | TBD | Engines | Draft |
 | 42807 | Case Adapter | Case adapter (purple brace) for securing the HSI Mk.1 Body Assembly (96784) to a case. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
-| 48793 | Spur Gear, 66 T, Drum Brake | 66-tooth spur gear (module 1.0, 20° pressure angle, 140 mm pitch Ø ≈ 70 mm pitch radius). 3 mm drum band on OD for printed friction brake shoe. Material: PETG or PA-CF, 3D-printed, face width 10 mm, reamed Ø12 mm bore with M4 setscrew flat. | 1 | Printed Part | In-house additive manufacturing | TBD | Engines | Draft |
+| 48793 | Spur Gear, 66 T, Drum Brake | 66-tooth spur gear (module 1.0, 20° pressure angle, 140 mm pitch Ø ≈ 70 mm pitch radius). 3 mm drum band on OD for printed friction brake shoe. Material: PETG or PA-CF, 3D-printed, face width 10 mm, reamed Ø12 mm bore with M4 setscrew flat. | 1 | 3D Printed | In-house additive manufacturing | TBD | Engines | Draft |
 | 51364 | Sensors Kit | Collection of sensors used in the HSI Mk.1, including hall effect potentiometers for axis position sensing. | 1 | Assembly | In-house design | TBD | Engines | Draft |
 | 56865 | Toggle Switch, 2 Position | 2-position, round, maintained, SPST-NO toggle switch with 2 terminals, 6A rating. Used for Jet Pipe Temp Limit (JPTL) and Manual Fuel Control functions in the HSI Mk.1. | 2 | Electronics | https://www.mcmaster.com/7343K184/ | 8.96 | Engines | Release |
 | 57832 | Grip Assembly | Complete assembly for the HSI Mk.1 grip | 1 | Assembly | Unknown | TBD | Kurisu | Draft |
@@ -58,6 +59,7 @@ Generated on: 2025-05-26
 ├── 62988 - Mounting Kit
 │   └── 67367 - Dzus Rail
 ├── 69806 - Bits Kit
+│   ├── 12574 - Hex Head Screw, M4 x 20 mm, Class 8.8, Zinc-Plated Steel
 │   ├── 31612 - Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel
 │   ├── 39780 - Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel
 │   ├── 60550 - Nut, Locking, M8
