@@ -35,7 +35,7 @@ Generated on: 2025-05-26
 | 74933 | Friction Shoe | Friction shoe that fits inside the friction spur gear. | 4 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 77875 | Ghost Volume, Throttle Body, Outer | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 81137 | Wiring Harness | Complete wiring harness for connecting all electronic components and sensors in the HSI Mk.1. | 1 | Cable or Wire | In-house design | TBD | Engines | Draft |
-| 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | 3D Printed | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
+| 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | Off The Shelf | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
 | 91686 | Controller Board | Main microcontroller board for the HSI Mk.1. Responsible for reading sensor inputs and communicating with the flight simulator software. | 1 | Electronics | In-house design | TBD | Engines | Draft |
 | 96784 | Body Assembly | The body assembly for the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Xpendable | Draft |
 | 98415 | Ghost Parts | A collector assembly for all ghost parts used in the HSI Mk.1 | 1 | Ghost | Unknown | TBD | Engines | Draft |
