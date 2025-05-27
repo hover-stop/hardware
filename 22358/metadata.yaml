@@ -1,4 +1,5 @@
-part_number: 22358
+part_number: '22358'
+name: Throttle Grip Comms Switch Rocker Switch
 owner: Kurisu
 description: Rocker-switch for the comms-switch of the throttle grip, designed for either 3D printing or CNC machining
 parent_assembly: '32002'
@@ -10,5 +11,6 @@ alternatives:
 primary_source: In-house prototype
 secondary_source: None yet
 cost: TBD
+quantity: 1
 contributors:
     - Kurisu

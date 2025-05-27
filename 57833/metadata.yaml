@@ -1,4 +1,5 @@
-part_number: 57833
+part_number: '57833'
+name: Throttle Grip Analog Stick Backing Plate
 owner: Kurisu
 description: Backing plate to hold the analog stick of the throttle grip in place, designed for either 3D printing or CNC machining
 parent_assembly: '32002'
@@ -10,5 +11,6 @@ alternatives:
 primary_source: In-house prototype
 secondary_source: None yet
 cost: TBD
+quantity: 1
 contributors:
     - Kurisu
