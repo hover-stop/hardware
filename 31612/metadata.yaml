@@ -1,0 +1,17 @@
+part_number: '31612'
+owner: Engines
+name: Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel
+description: M8 × 25 mm flat-head Phillips screw, zinc-plated steel, fully threaded
+  (M8-1.25, Class 6h, right-hand). Head Ø 14.5 mm, head height 4 mm, 90 ° countersink,
+  DIN 965 compliant, 60 000 psi tensile strength. Provides mild corrosion resistance;
+  RoHS 3 and REACH compliant.
+parent_assembly: '69806'
+status: Draft
+part_type: Off The Shelf
+alternatives: []
+primary_source: https://www.mcmaster.com/91420A530/
+secondary_source: None yet
+cost: $0.40
+quantity: 2
+contributors:
+- Engines

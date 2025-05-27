@@ -1,0 +1,15 @@
+part_number: '22357'
+owner: Engines
+name: Support Frame, Throttle
+description: This is the main supporting frame that locates and retains the throttle
+  mechanism.
+parent_assembly: '96784'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

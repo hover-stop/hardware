@@ -1,0 +1,14 @@
+part_number: '74933'
+owner: Engines
+name: Friction Shoe
+description: Friction shoe that fits inside the friction spur gear.
+parent_assembly: '22357'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 4
+contributors:
+- Engines

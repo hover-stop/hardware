@@ -1,0 +1,15 @@
+part_number: '31074'
+owner: Engines
+name: Angle Sensor, Retaining Plate
+description: This is the plate that retains the attachment plate of the angle sensor
+  in the throttle support frame
+parent_assembly: '22357'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

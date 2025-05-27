@@ -1,0 +1,15 @@
+part_number: '28175'
+owner: Engines
+name: Brush, Throttle
+description: Brush strip used to seal the opening in the throttle body where the throttle
+  lever protrudes.
+parent_assembly: '22357'
+status: Release
+part_type: Off The Shelf
+alternatives: []
+primary_source: https://www.mcmaster.com/74405T1-74405T109/
+secondary_source: None yet
+cost: $2.75
+quantity: 2
+contributors:
+- Engines

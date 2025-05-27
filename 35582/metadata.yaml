@@ -1,0 +1,15 @@
+part_number: '35582'
+owner: Engines
+name: Angle Sensor, Attachment Plate
+description: The moving plate that retains the angle sensor when it is mounted to
+  the frame assembly.
+parent_assembly: '22357'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: Unknown
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines
