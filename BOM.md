@@ -14,7 +14,9 @@ Generated on: 2025-05-26
 | 12574 | Hex Head Screw, M4 x 20 mm, Class 8.8, Zinc-Plated Steel | M4 × 20 mm hex-head screw, Class 8.8 steel, fully threaded (M4-0.7 mm, Class 6h, right-hand). Head width 7 mm, height 2.8 mm; ISO 4017 / DIN 933 compliant. Zinc-plated finish for mild corrosion resistance; 110 000 psi tensile strength, Rockwell C21 hardness. Cost ≈ /usr/bin/bash.02 ea (pack of 100). RoHS 3 and REACH compliant. | 6 | Off The Shelf | https://www.mcmaster.com/91280A140/ | TBD | Engines | Draft |
 | 14619 | Ghost Volume, Throttle Body, Inner | A ghost part that represents the inside limits for the throttle body desgin. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
 | 18923 | Spur Gear, Sensor | The small spur gear that attaches to the angle sensor.  This is driven by the levers.  It has a modulus of 0.8mm and 22 teeth. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
+| 18924 | Throttle Grip Comms Switch Center Button | Center button of the comms-rocker-switch of the throttle grip, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 22357 | Support Frame, Throttle | This is the main supporting frame that locates and retains the throttle mechanism. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
+| 22358 | Throttle Grip Comms Switch Rocker Switch | Rocker-switch for the comms-switch of the throttle grip, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 23794 | Angle Sensor, Hall Effect | CALT P3022C360V1T (alt P3022C90V1T) miniature non-contact hall effect angle sensor for precision rotary position measurement. Used for axis position sensing in the HSI Mk.1. | 3 | Electronics | https://caltsensor.com/product/miniature-non-contact-angle-sensor-p3022-series/ | TBD | Engines | Release |
 | 28175 | Brush, Throttle | Brush strip used to seal the opening in the throttle body where the throttle lever protrudes. | 2 | Off The Shelf | https://www.mcmaster.com/74405T1-74405T109/ | $2.75 | Engines | Release |
 | 31074 | Angle Sensor, Retaining Plate | This is the plate that retains the attachment plate of the angle sensor in the throttle support frame | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
@@ -28,14 +30,17 @@ Generated on: 2025-05-26
 | 51364 | Sensors Kit | Collection of sensors used in the HSI Mk.1, including hall effect potentiometers for axis position sensing. | 1 | Assembly | In-house design | TBD | Engines | Draft |
 | 56865 | Toggle Switch, 2 Position | 2-position, round, maintained, SPST-NO toggle switch with 2 terminals, 6A rating. Used for Jet Pipe Temp Limit (JPTL) and Manual Fuel Control functions in the HSI Mk.1. | 2 | Electronics | https://www.mcmaster.com/7343K184/ | 8.96 | Engines | Release |
 | 57832 | Grip Assembly | Complete assembly for the HSI Mk.1 grip | 1 | Assembly | Unknown | TBD | Kurisu | Draft |
+| 57833 | Throttle Grip Analog Stick Backing Plate | Backing plate to hold the analog stick of the throttle grip in place, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 60550 | Nut, Locking, M8 | Low strength steel, zinc plated nyloc nut for M8x1.25 threads | 1 | Off The Shelf | https://www.mcmaster.com/90631A115/ | $0.10 | Engines | Release |
 | 62146 | HoverStop HSI Mk.1 | The parent assembly for the HoverStop HSI Mk.1 throttle interface unit. | 1 | Assembly | Unknown | TBD | Engines | Draft |
+| 62147 | Throttle Grip Side Button Backing Plate | Backing plate for the side buttons of the throttle grip, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 62988 | Mounting Kit | Optional mounting kit for installing the HSI Mk.1 throttle (via its Body Assembly) into an enclosure. Includes the mounting tray (42807) and any associated hardware for this specific mounting method. | 1 | Assembly | In-house design | TBD | Xpendable | Draft |
 | 63478 | Toggle Switch, 3 Position | 3-position, rounded, momentary, DPDT toggle switch with IP67 rating. Used for the Rudder Trim control in the HSI Mk.1. | 1 | Electronics | https://www.mcmaster.com/8002K116/ | 18.13 | Engines | Release |
 | 67367 | Dzus Rail | Quick release mounting rail for Dzus fasteners | 2 | Off The Shelf | Unknown | TBD | Xpendable | Draft |
 | 69806 | Bits Kit | All screws, nuts, rivets, inserts, and other consumables necessary to build the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Engines | Draft |
 | 74933 | Friction Shoe | Friction shoe that fits inside the friction spur gear. | 4 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 77875 | Ghost Volume, Throttle Body, Outer | A ghost part that represents the outside limits for the throttle body design. | 1 | Ghost | Unknown | $0.00 | Xpendable | Prototype |
+| 77876 | Throttle Grip Comms Switch Backing Plate | Backing plate for the comms-rocker-switch of the throttle grip, designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 81137 | Wiring Harness | Complete wiring harness for connecting all electronic components and sensors in the HSI Mk.1. | 1 | Cable or Wire | In-house design | TBD | Engines | Draft |
 | 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | Off The Shelf | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
 | 91686 | Controller Board | Main microcontroller board for the HSI Mk.1. Responsible for reading sensor inputs and communicating with the flight simulator software. | 1 | Electronics | In-house design | TBD | Engines | Draft |
@@ -55,7 +60,12 @@ Generated on: 2025-05-26
 │   └── 91686 - Controller Board
 ├── 57832 - Grip Assembly
 │   ├── 32001 - Grip Chassis Part 1
+│   │   └── 62147 - Throttle Grip Side Button Backing Plate
 │   └── 32002 - Grip Chassis Part 2
+│       ├── 18924 - Throttle Grip Comms Switch Center Button
+│       ├── 22358 - Throttle Grip Comms Switch Rocker Switch
+│       ├── 57833 - Throttle Grip Analog Stick Backing Plate
+│       └── 77876 - Throttle Grip Comms Switch Backing Plate
 ├── 62988 - Mounting Kit
 │   └── 67367 - Dzus Rail
 ├── 69806 - Bits Kit
