@@ -31,7 +31,7 @@ jobs:
     - name: Install build tools
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential python3-dev cython
+        sudo apt-get install -y build-essential python3-dev cython3
 
     - name: Validate metadata
       run: python utils/cli_validate_metadata.py
