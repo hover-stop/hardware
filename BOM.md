@@ -25,7 +25,9 @@ Generated on: 2025-05-26
 | 32002 | Grip Chassis Part 2 | Second part of the main chassis body for the throttle grip designed for either 3D printing or CNC machining | 1 | 3D Printed | In-house prototype | TBD | Kurisu | Draft |
 | 35582 | Angle Sensor, Attachment Plate | The moving plate that retains the angle sensor when it is mounted to the frame assembly. | 1 | 3D Printed | Unknown | TBD | Engines | Draft |
 | 39780 | Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel | M4 x 30 mm pan head Phillips screw, zinc-plated steel, fully threaded, DIN 7985 and ISO 7045 compliant. Provides mild corrosion resistance. | 1 | Off The Shelf | https://www.mcmaster.com/92005A232/ | TBD | Engines | Draft |
+| 41464 | Friction Cam Lever, Drum Brake, 3D-Printed | 3D-printed cam lever that pivots to press the brake shoes against the 66-tooth drum gear. Material: PETG or PA-CF, 4 perimeters, 40 % gyroid infill. | 2 | 3D Printed | In-house additive manufacturing | TBD | Engines | Draft |
 | 42807 | Case Adapter | Case adapter (purple brace) for securing the HSI Mk.1 Body Assembly (96784) to a case. | 1 | 3D Printed | In-house design | TBD | Xpendable | Draft |
+| 45193 | Wool Felt Strip, F1, 1/16" × 1/2" × 10 ft | Firm wool felt strip, Grade F1 (95 % wool). Dimensions: 1/16 in (1.6 mm) thick × 1/2 in (12.7 mm) wide × 10 ft long. Density 1 lb/yd², durometer 35A ±5, compressive load 21 psi at 10 % strain. Plain backing, off-white, –80 °F to +200 °F service, 500 psi tensile strength. Used as friction shoe lining; provides good wear and vibration damping. Cost ≈ .23 each. RoHS 3 and REACH compliant. | 1 | Off The Shelf | https://www.mcmaster.com/5051K152/ | $0.23 | Engines | Draft |
 | 48793 | Spur Gear, 66 T, Drum Brake | 66-tooth spur gear (module 1.0, 20° pressure angle, 140 mm pitch Ø ≈ 70 mm pitch radius). 3 mm drum band on OD for printed friction brake shoe. Material: PETG or PA-CF, 3D-printed, face width 10 mm, reamed Ø12 mm bore with M4 setscrew flat. | 1 | 3D Printed | In-house additive manufacturing | TBD | Engines | Draft |
 | 51364 | Sensors Kit | Collection of sensors used in the HSI Mk.1, including hall effect potentiometers for axis position sensing. | 1 | Assembly | In-house design | TBD | Engines | Draft |
 | 56865 | Toggle Switch, 2 Position | 2-position, round, maintained, SPST-NO toggle switch with 2 terminals, 6A rating. Used for Jet Pipe Temp Limit (JPTL) and Manual Fuel Control functions in the HSI Mk.1. | 2 | Electronics | https://www.mcmaster.com/7343K184/ | 8.96 | Engines | Release |
@@ -44,6 +46,7 @@ Generated on: 2025-05-26
 | 81137 | Wiring Harness | Complete wiring harness for connecting all electronic components and sensors in the HSI Mk.1. | 1 | Cable or Wire | In-house design | TBD | Engines | Draft |
 | 87883 | Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel | M4 x 10 mm flat head Phillips screw, zinc-plated steel, fully threaded, DIN 965 compliant. Provides mild corrosion resistance and is designed to sit flush in countersunk holes. | 4 | Off The Shelf | https://www.mcmaster.com/91420A220/ | TBD | Engines | Draft |
 | 91686 | Controller Board | Main microcontroller board for the HSI Mk.1. Responsible for reading sensor inputs and communicating with the flight simulator software. | 1 | Electronics | In-house design | TBD | Engines | Draft |
+| 94961 | Hex Nut, M4, Zinc-Plated Steel | Standard hex nut, M4 × 0.7 mm coarse thread (Class 6H, right-hand). Width 7 mm, height 3.2 mm. Low-strength zinc-plated steel (DIN 934); suitable for light-duty fastening. Provides mild corrosion resistance. Cost ≈ TBD ea (pack of 100). RoHS 3 and REACH compliant. | 1 | Off The Shelf | https://www.mcmaster.com/90591A141/ | TBD | Engines | Draft |
 | 96784 | Body Assembly | The body assembly for the HSI Mk.1 | 1 | Assembly | Unknown | TBD | Xpendable | Draft |
 | 98415 | Ghost Parts | A collector assembly for all ghost parts used in the HSI Mk.1 | 1 | Ghost | Unknown | TBD | Engines | Draft |
 
@@ -73,7 +76,8 @@ Generated on: 2025-05-26
 │   ├── 31612 - Flat Head Screw, M8 x 25 mm, Zinc-Plated Steel
 │   ├── 39780 - Pan Head Screw, M4 x 30 mm, Zinc-Plated Steel
 │   ├── 60550 - Nut, Locking, M8
-│   └── 87883 - Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel
+│   ├── 87883 - Flat Head Screw, M4 x 10 mm, Zinc-Plated Steel
+│   └── 94961 - Hex Nut, M4, Zinc-Plated Steel
 ├── 96784 - Body Assembly
 │   ├── 11319 - Throttle Body Bottom Plate
 │   ├── 22357 - Support Frame, Throttle
@@ -81,6 +85,8 @@ Generated on: 2025-05-26
 │   │   ├── 28175 - Brush, Throttle
 │   │   ├── 31074 - Angle Sensor, Retaining Plate
 │   │   ├── 35582 - Angle Sensor, Attachment Plate
+│   │   ├── 41464 - Friction Cam Lever, Drum Brake, 3D-Printed
+│   │   ├── 45193 - Wool Felt Strip, F1, 1/16" × 1/2" × 10 ft
 │   │   ├── 48793 - Spur Gear, 66 T, Drum Brake
 │   │   └── 74933 - Friction Shoe
 │   └── 42807 - Case Adapter
