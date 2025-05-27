@@ -5,7 +5,7 @@ description: '3D-printed cam lever that pivots to press the brake shoes against 
   66-tooth drum gear. Material: PETG or PA-CF, 4 perimeters, 40 % gyroid infill.''
 parent_assembly: '22357'
 status: Draft
-part_type: Printed Part
+part_type: 3D Printed
 alternatives: []
 primary_source: In-house additive manufacturing
 secondary_source: None yet
