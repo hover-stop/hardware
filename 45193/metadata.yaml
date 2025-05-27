@@ -1,0 +1,18 @@
+part_number: '45193'
+owner: Engines
+name: Wool Felt Strip, F1, 1/16" × 1/2" × 10 ft
+description: 'Firm wool felt strip, Grade F1 (95 % wool). Dimensions: 1/16 in (1.6
+  mm) thick × 1/2 in (12.7 mm) wide × 10 ft long. Density 1 lb/yd², durometer 35A
+  ±5, compressive load 21 psi at 10 % strain. Plain backing, off-white, –80 °F to
+  +200 °F service, 500 psi tensile strength. Used as friction shoe lining; provides
+  good wear and vibration damping. Cost ≈ .23 each. RoHS 3 and REACH compliant.'
+parent_assembly: '22357'
+status: Draft
+part_type: Off The Shelf
+alternatives: []
+primary_source: https://www.mcmaster.com/5051K152/
+secondary_source: None yet
+cost: $0.23
+quantity: 1
+contributors:
+- Engines
