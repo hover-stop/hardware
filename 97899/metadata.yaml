@@ -1,0 +1,17 @@
+part_number: '97899'
+owner: Engines
+name: Throttle Lever with Spur Gear, 176 T, m0.8, 3D-Printed
+description: 'Throttle lever arm integrating a 176-tooth spur gear (module 0.8, 20
+  ° pressure angle) for an exact 8 : 1 mesh with the 22-tooth sensor pinion. Material:
+  PETG or PA-CF; print with ≥5 perimeters and 60 % gyroid infill. Designed for the
+  22357 throttle-brake assembly.'
+parent_assembly: '22357'
+status: Draft
+part_type: 3D Printed
+alternatives: []
+primary_source: In-house additive manufacturing
+secondary_source: None yet
+cost: TBD
+quantity: 1
+contributors:
+- Engines

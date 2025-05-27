@@ -1,0 +1,18 @@
+part_number: '46668'
+owner: Engines
+name: Ball Bearing, 608, 8 mm ID × 22 mm OD × 7 mm, Open
+description: 'Standard single-row radial ball bearing, trade size 608. Dimensions:
+  8 mm ID (−0.008 / 0 mm tolerance), 22 mm OD (−0.009 / 0 mm), 7 mm width (−0.12 /
+  0 mm). Steel rings, balls, and cage; open-seal design. Dynamic load 730 lb, static
+  load 300 lb, max speed 36 000 rpm. Lubricated with oil, ABEC-1, C0 clearance. Temperature
+  −20 °F to 230 °F. DIN 625-1 compliant. Cost ≈ .56 each; five required for assembly.'
+parent_assembly: '22357'
+status: Draft
+part_type: Off The Shelf
+alternatives: []
+primary_source: https://www.mcmaster.com/5972K91/
+secondary_source: None yet
+cost: $0.56
+quantity: 5
+contributors:
+- Engines
